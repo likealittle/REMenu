@@ -96,7 +96,6 @@ typedef NS_ENUM(NSInteger, REMenuLiveBackgroundStyle) {
 @property (strong, readwrite, nonatomic) UIColor *liveBlurTintColor; // Available only in iOS 7
 @property (assign, readwrite, nonatomic) REMenuLiveBackgroundStyle liveBlurBackgroundStyle; // Available only in iOS 7
 @property (copy, readwrite, nonatomic) void (^badgeLabelConfigurationBlock)(UILabel *badgeLabel, REMenuItem *item);
-@property (nonatomic, assign) CGFloat navigationBarHeight;
 
 - (id)initWithItems:(NSArray *)items;
 - (void)showFromRect:(CGRect)rect inView:(UIView *)view;

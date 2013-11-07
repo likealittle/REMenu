@@ -90,9 +90,7 @@
         self.bounce = YES;
         self.bounceAnimationDuration = 0.2;
         
-        self.appearsBehindNavigationBar = REUIKitIsFlatMode() ? YES : NO;
-        
-        self.navigationBarHeight = 64;
+        self.appearsBehindNavigationBar = REUIKitIsFlatMode() ? YES : NO;        
     }
     return self;
 }
@@ -172,7 +170,7 @@
         button;
     });
     
-    CGFloat navigationBarOffset = self.appearsBehindNavigationBar && self.navigationBar ? self.navigationBarHeight : 0;
+    CGFloat navigationBarOffset = self.appearsBehindNavigationBar && self.navigationBar ? CGRectGetMaxY(self.navigationBar.frame) : 0;
     
     // Append new item views to REMenuView
     //
@@ -257,7 +255,7 @@
 
 - (void)closeWithCompletion:(void (^)(void))completion
 {
-    CGFloat navigationBarOffset = self.appearsBehindNavigationBar && self.navigationBar ? self.navigationBarHeight : 0;
+    CGFloat navigationBarOffset = self.appearsBehindNavigationBar && self.navigationBar ? CGRectGetMaxY(self.navigationBar.frame) : 0;
     
     void (^closeMenu)(void) = ^{
         [UIView animateWithDuration:self.animationDuration animations:^{
