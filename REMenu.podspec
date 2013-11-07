@@ -4,8 +4,7 @@ Pod::Spec.new do |s|
   s.authors     = { 'Roman Efimov' => 'romefimov@gmail.com' }
   s.homepage    = 'https://github.com/romaonthego/REMenu'
   s.summary     = 'Dropdown menu inspired by Vine.'
-  s.source      = { :git => 'https://github.com/romaonthego/REMenu.git',
-                    :tag => '1.6' }
+  s.source      = { :git => 'https://github.com/likealittle/REMenu.git' }
   s.license     = { :type => "MIT", :file => "LICENSE" }
 
   s.platform = :ios, '5.0'
