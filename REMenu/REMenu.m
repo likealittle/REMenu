@@ -90,7 +90,7 @@
         self.bounce = YES;
         self.bounceAnimationDuration = 0.2;
         
-        self.appearsBehindNavigationBar = REUIKitIsFlatMode() ? YES : NO;        
+        self.appearsBehindNavigationBar = YES; //REUIKitIsFlatMode() ? YES : NO;        
     }
     return self;
 }
