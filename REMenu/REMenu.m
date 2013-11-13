@@ -103,6 +103,11 @@
     return self;
 }
 
+- (void)setBackgroundColor:(UIColor *)backgroundColor {
+    _backgroundColor = backgroundColor;
+    self.menuView.backgroundColor = backgroundColor;
+}
+
 - (void)showFromRect:(CGRect)rect inView:(UIView *)view
 {
     self.isOpen = YES;
