@@ -239,7 +239,11 @@
         CGRect frame = self.menuView.frame;
         frame.origin.y = -40.0 - self.separatorHeight;
         self.menuWrapperView.frame = frame;
-    } completion:nil];
+    } completion:^(BOOL finished) {
+        if (self.openCompletionHandler) {
+            self.openCompletionHandler();
+        }
+    }];
 }
 
 - (void)showInView:(UIView *)view

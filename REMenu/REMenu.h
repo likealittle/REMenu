@@ -50,6 +50,7 @@ typedef NS_ENUM(NSInteger, REMenuLiveBackgroundStyle) {
 @property (assign, readonly, nonatomic) BOOL isOpen;
 @property (assign, readwrite, nonatomic) BOOL waitUntilAnimationIsComplete;
 @property (copy, readwrite, nonatomic) void (^closeCompletionHandler)(void);
+@property (copy, readwrite, nonatomic) void (^openCompletionHandler)(void);
 @property (assign, readwrite, nonatomic) BOOL closeOnSelection;
 
 
