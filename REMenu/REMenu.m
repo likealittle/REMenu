@@ -239,6 +239,9 @@
         CGRect frame = self.menuView.frame;
         frame.origin.y = -40.0 - self.separatorHeight;
         self.menuWrapperView.frame = frame;
+        if (self.executeWhileOpenAnimation) {
+            self.executeWhileOpenAnimation();
+        }
     } completion:^(BOOL finished) {
         if (self.openCompletionHandler) {
             self.openCompletionHandler();
@@ -272,6 +275,9 @@
             frame.origin.y = - self.combinedHeight - navigationBarOffset;
             self.menuWrapperView.frame = frame;
             self.backgroundView.alpha = 0;
+            if (self.executeWhileCloseAnimation) {
+                self.executeWhileCloseAnimation();
+            }
         } completion:^(BOOL finished) {
             [self.menuView removeFromSuperview];
             [self.menuWrapperView removeFromSuperview];
